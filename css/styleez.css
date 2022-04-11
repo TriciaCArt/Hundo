@@ -58,4 +58,12 @@ main>.container {
     font-weight: bold;
 }
 
+.boldItem {
+    font-weight: bold;
+}
+
+.colorRed {
+    color: red;
+}
+
 @media (min-width: 576px) {}

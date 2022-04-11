@@ -1,27 +1,33 @@
 // Step One - get -controller accept requrests
-function getMessage() {
-    let msg = document.getElementById("message").value;
-    displayMessage(msg);
+function getValues() {
+    let startValue = document.getElementById("startValue").value;
+    let endValue = document.getElementById("endValue").value;
+
+    displayValues(startValue, endValue);
 }
 
 // final step - display those values
-function displayMessage(message) {
-    // <li class="list-group-item">A List Item</li>
+function displayValues(start, end) {
 
-    // let item = `<li class="list-group-item">${message}</li>`;
-
-    // Frist get the ol element from the page
+    // First get the ol element from the page
     element = document.getElementById("results");
 
-    // Next create a new li element
-    let item = document.createElement("li");
-    // add classes to the li element
-    item.classList.add("list-group-item");
-    // set the message for the li element
-    item.innerHTML = message;
+    // then start the loop
 
-    // add the new item to the list
-    element.appendChild(item);
+    for (let i = start; i <= end; i++) {
 
+        let item = document.createElement("div");
+
+        if (i % 2 == 0) {
+            item.classList.add("boldItem");
+
+        } else {
+            item.classList.add("colorRed");
+        }
+        // and display the results
+        item.classList.add("col");
+        item.innerHTML = i;
+        element.appendChild(item);
+    }
 
 }

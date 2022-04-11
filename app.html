@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App NAME: Coding Challenge By Tricia Chitwood</title>
+    <title>The Final Countdown: Coding Challenge By Tricia Chitwood</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -58,23 +58,45 @@
 
     <main class="flex-shrink-0">
         <div class="container mt-5">
-            <h1>To Do List</h1>
-            <div class="row align-items-end">
+            <div class="row mb-3">
                 <div class="col">
-                    <label class="form-label" for="message">To Do Item</label>
-                    <input type="text" name="message" id="message" class="form-control" placeholder="Enter a message">
-                </div>
-                <div class="mt-3 col">
-                    <button id="effYou" class="btn btn-primary">Display Me!</button>
+                    <h1>The Final Countdown</h1>
+
+                    <p>Live life one loop at a time. A javascript coding exercise using loops. Write a program the
+                        displays the numbers from 0 to 100. Display the even numbers in BOLD.</p>
+                    <h2 class="border-bottom">Instructions</h2>
+                    <p>Enter a starting value and an ending value. Press the button and the values will appear.</p>
                 </div>
             </div>
-            <div class="message mt-5">
-                <ol id="results" class="list-group list-group-numbered">
-                    <!-- My items will go here -->
-                </ol>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label" for="startValue">Enter a start value</label>
+                            <input type="number" id="startValue" value="1" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="endValue">Enter an end value</label>
+                            <input type="number" id="endValue" value="100" class="form-control">
+                        </div>
+                        <div class="col-12 text-end">
+                            <button id="btnSubmit" class="btn btn-primary btn-sm">Do it!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <h2 class="border-bottom">Results</h2>
+                    <div class="message mt-5">
+                        <div id="results" class="row">
+                            <!-- My items will go here -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
     <footer class="footer mt-auto py-3 sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
@@ -107,7 +129,7 @@
     </script>
     <script src="/js/site.js"></script>
     <script>
-        document.getElementById("effYou").addEventListener("click", getMessage);
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 </body>
 
